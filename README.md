@@ -1,8 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is Demo + Live project to test Nivo JS using Next JS. Based on a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies for the project:
+
+```bash
+npm install
+```
+
+And run the development server:
 
 ```bash
 npm run dev
@@ -22,15 +28,37 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Next.js and Nivo, take a look at the following resources:
 
+- [Nivo](https://nivo.rocks/) - Nivo DataViz Official website.
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Compile before deploy
+
+```bash
+npm run build
+npm run export
+```
 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Deploy on Surge.sh
+
+Install surge if there is not installed yet:
+
+```bash
+npm install --global surge
+```
+
+And deploy the project:
+
+```bash
+surge ./out nivo-pie-ssr[-add-more-].surge.sh
+```
