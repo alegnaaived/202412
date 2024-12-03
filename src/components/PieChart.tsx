@@ -1,5 +1,5 @@
 // src/components/PieChart.tsx
-'use client'; // Indica que este es un componente del cliente
+'use client'; // Client component tag
 
 import { ResponsivePie } from '@nivo/pie';
 
@@ -22,6 +22,7 @@ export default function PieChart({ data }) {
         arcLinkLabelsColor={{ from: 'color' }}
         arcLabelsSkipAngle={10}
         arcLabelsTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
+        colors={{scheme: 'category10'}}
       />
     </div>
   );

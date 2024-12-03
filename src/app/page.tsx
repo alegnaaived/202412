@@ -1,5 +1,6 @@
-// src/app/page.tsx (Componente del servidor)
+// src/app/page.tsx (Server component)
 import PieChart from '../components/PieChart';
+import BarChart from '../components/BarChart';
 
 async function fetchData() {
   return [
@@ -10,15 +11,22 @@ async function fetchData() {
 }
 
 export default async function Home() {
-  const data = await fetchData(); // Los datos se obtienen del servidor
+  const data = await fetchData(); // Data retrieval
 
-  // Convertir a string JSON y pasar como prop para evitar discrepancia
+  // Convert to JSON string and set as prop to avoid conflicts
   const serializedData = JSON.stringify(data);
 
   return (
     <div>
       <h1 style={{ textAlign: 'center' }}>Nivo Pie Chart with App Router</h1>
+      
+      {/* Pie Chart */}
+      <h2 style={{ textAlign: 'center' }}>Pie Chart</h2>
       <PieChart data={serializedData} />
+
+      {/* Bar Chart */}
+      <h2 style={{ textAlign: 'center' }}>Bar Chart</h2>
+      <BarChart data={serializedData} />
     </div>
   );
 }
