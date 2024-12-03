@@ -1,5 +1,5 @@
 // src/components/PieChart.tsx
-'use client'; // Indica que este es un componente del cliente
+'use client'; // Client component tag
 
 import { ResponsivePie } from '@nivo/pie';
 
