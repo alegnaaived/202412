@@ -22,6 +22,7 @@ export default function PieChart({ data }) {
         arcLinkLabelsColor={{ from: 'color' }}
         arcLabelsSkipAngle={10}
         arcLabelsTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
+        colors={{scheme: 'category10'}}
       />
     </div>
   );
